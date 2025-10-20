@@ -1,9 +1,9 @@
+import io
+import os
+
 import streamlit as st
 from PIL import Image, ImageDraw
 import numpy as np
-import io
-import os
-import time
 
 # ---------- Налаштування ----------
 GRID_SIZE = 5  # 5x5 сітка
@@ -67,7 +67,7 @@ def format_vector_multiline(vec, values_per_row=GRID_SIZE, precision=0):
 
 
 # ---------- ІНТЕРФЕЙС ----------
-st.title("🧠 Лабораторна 6: Мережа Хеммінга")
+st.title("Лабораторна 6: Мережа Хеммінга")
 st.markdown("Система розпізнавання, що реалізує оптимальний класифікатор мінімуму похибки.")
 
 # === Ініціалізація станів ===
@@ -86,7 +86,7 @@ if "classification_result" not in st.session_state:
 
 # === Завантаження зразків ===
 st.write("---")
-st.subheader("1️⃣ Завантаження зразкових зображень (еталонів)")
+st.subheader("Завантаження зразкових зображень (еталонів)")
 
 col_settings, _ = st.columns(2)
 with col_settings:
@@ -114,7 +114,7 @@ for i, col in enumerate(cols):
 
 # === Навчання (обчислення параметрів мережі) ===
 st.write("---")
-st.subheader("2️⃣ Навчання мережі (обчислення параметрів)")
+st.subheader("Навчання мережі (обчислення параметрів)")
 
 if st.button("Обчислити параметри мережі (Train)"):
     # Збираємо лише один еталон з кожного завантаженого класу
@@ -148,7 +148,7 @@ if st.button("Обчислити параметри мережі (Train)"):
 # === Відображення результатів навчання ===
 if st.session_state.hamming_params:
     st.write("---")
-    st.subheader("📊 Параметри навченої мережі")
+    st.subheader("Параметри навченої мережі")
 
     st.markdown("**Еталонні бінаризовані вектори (+1 / -1):**")
     for etalon in st.session_state.etalon_vectors:
@@ -167,7 +167,7 @@ if st.session_state.hamming_params:
 
 # === Розпізнавання невідомого образу ===
 st.write("---")
-st.subheader("3️⃣ Розпізнавання невідомого образу")
+st.subheader("Розпізнавання невідомого образу")
 
 unknown_file = st.file_uploader("Завантажити зображення невідомого образу", type=["png", "jpg", "jpeg"])
 if unknown_file:
@@ -248,7 +248,7 @@ if st.session_state.unknown:
 
 # === Збереження звіту ===
 st.write("---")
-st.subheader("4️⃣ Збереження звіту")
+st.subheader("Збереження звіту")
 
 if st.button("Зберегти звіт"):
     if not st.session_state.hamming_params or not st.session_state.unknown:

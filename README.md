@@ -1,8 +1,8 @@
-# 🤖 Basic AI: Classic Neural Network Implementations
+# Basic AI: Classic Neural Network Implementations
 
 This repository is a personal project exploring the foundational algorithms of Artificial Intelligence. It contains from-scratch Python implementations of several classic neural network architectures used for pattern recognition and associative memory.
 
-## 🚀 Implemented Models
+## Implemented Models
 
 This project explores three fundamental neural network architectures.
 
@@ -47,22 +47,21 @@ An implementation of the Hamming network, a recurrent classification model known
     * Generally faster and more accurate.
     * Does not suffer from the same local minima problems as the Hopfield network.
 
-## 📂 Repository Structure
+## Repository Structure
 
 * **`main`**: The main branch, ideally containing the most stable version or an overview.
 * **`perceptron`**: Contains the Perceptron implementation.
 * **`Hopfield`**: Contains the Hopfield Network implementation.
 * **`Heming`**: Contains the Hamming Network implementation.
 
-## 🛠️ Setup & Running
+## Setup & Running
 
 ### Prerequisites
 
-* **Core Libraries:** This project relies on [Numpy](https://numpy.org/) for numerical operations and [Streamlit](https://streamlit.io/) for the interactive UI. You can install them via `pip`:
-    ```bash
-    pip install numpy streamlit
-    ```
-    (Or by using the `requirements.txt` file, if one is provided in the branch).
+* **Prerequisites:** All project dependencies are listed in the `requirements.txt` file. Install them using `pip` with the following command:
+```bash
+pip install -r requirements.txt
+```
 
 * **Data:** The models are designed for image pattern recognition. A good dataset for testing is the [MNIST dataset (JPG format)](https://www.kaggle.com/datasets/scolianni/mnistasjpg), which contains images of handwritten numbers, letters, or symbols.
 
